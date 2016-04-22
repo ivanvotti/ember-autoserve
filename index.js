@@ -16,7 +16,6 @@ module.exports = {
         description: 'Runs `ember serve` and will automatically restart it when necessary',
         works: 'insideProject',
 
-
         validateAndRun: function(rawArgs) {
           return this.run({}, rawArgs);
         },
@@ -28,10 +27,13 @@ module.exports = {
               args: ['serve'].concat(rawArgs),
               watch: [
                 'ember-cli-build.js',
-                '.jshintrc',
-                'tests/.jshintrc',
                 'package.json',
-                'bower.json'
+                'bower.json',
+                '.scss-lint.yml',
+                'eslint/base.js',
+                'config/base.js',
+                'config/dev.js',
+                'config/local.js'
               ]
             });
 
