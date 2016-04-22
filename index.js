@@ -13,6 +13,7 @@ module.exports = {
     return {
       autoserve: {
         name: 'autoserve',
+        aliases: ['as'],
         description: 'Runs `ember serve` and will automatically restart it when necessary',
         works: 'insideProject',
 
